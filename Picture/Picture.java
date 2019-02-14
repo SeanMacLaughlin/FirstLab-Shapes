@@ -13,9 +13,15 @@
 public class Picture
 {
     private Square wall;
+   
     private Square window;
     private Triangle roof;
     private Circle sun;
+    private Circle treeTop;
+    private Circle treeTop2;
+    private Circle treeTop3;
+    private Square trunk;
+    private Square trunk2;
 
     /**
      * Constructor for objects of class Picture
@@ -30,11 +36,15 @@ public class Picture
      */
     public void draw()
     {
+    
+
         wall = new Square();
+        wall.changeColor("blue");
         wall.moveVertical(80);
         wall.changeSize(100);
         wall.makeVisible();
-
+        
+       
         window = new Square();
         window.changeColor("black");
         window.moveHorizontal(20);
@@ -49,10 +59,45 @@ public class Picture
 
         sun = new Circle();
         sun.changeColor("yellow");
-        sun.moveHorizontal(180);
-        sun.moveVertical(-10);
+        sun.moveHorizontal(10);
+        sun.moveVertical(-50);
         sun.changeSize(60);
         sun.makeVisible();
+        
+        treeTop = new Circle();
+        treeTop.changeColor("green");
+        treeTop.moveHorizontal(175);
+        treeTop.moveVertical(1);
+        treeTop.changeSize(50);
+        treeTop.makeVisible();
+        
+        treeTop2 = new Circle();
+        treeTop2.changeColor("green");
+        treeTop2.moveHorizontal(200);
+        treeTop2.moveVertical(25);
+        treeTop2.changeSize(50);
+        treeTop2.makeVisible();
+        
+        treeTop3 = new Circle();
+        treeTop3.changeColor("green");
+        treeTop3.moveHorizontal(150);
+        treeTop3.moveVertical(25);
+        treeTop3.changeSize(50);
+        treeTop3.makeVisible();
+        
+        trunk = new Square();
+        trunk.changeColor("black");
+        trunk.changeSize(50);
+        trunk.moveHorizontal(135);
+        trunk.moveVertical(75);
+        trunk.makeVisible();
+        
+        trunk2 = new Square();
+        trunk2.changeColor("black");
+        trunk2.changeSize(50);
+        trunk2.moveHorizontal(135);
+        trunk2.moveVertical(100);
+        trunk2.makeVisible();
     }
 
     /**
